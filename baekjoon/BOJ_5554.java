@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author kimsihwan
  *
  */
-public class BOJ_5339 {
+public class BOJ_5554 {
 
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
