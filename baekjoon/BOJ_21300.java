@@ -4,13 +4,13 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
- * 이름 : Vera and Outfits 
- * url : https://www.acmicpc.net/problem/15439
+ * 이름 : Bottle Return 
+ * url : https://www.acmicpc.net/problem/21300
  * 
  * @author kimsihwan
  *
  */
-public class BOJ_15439 {
+public class BOJ_21300 {
 
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
