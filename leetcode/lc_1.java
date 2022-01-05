@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author kimsihwan
  *
  */
-public class BOJ_8393 {
+public class lc_1 {
 
 	// Brute Force
 	// Time Complexity : O(n2)
