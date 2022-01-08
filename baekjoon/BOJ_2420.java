@@ -5,7 +5,7 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
- * ÀÌ¸§ : »çÆÄ¸®¿ùµå
+ * ì´ë¦„ : ì‚¬íŒŒë¦¬ì›”ë“œ
  * url : https://www.acmicpc.net/problem/2420
  * 
  * @author kimsihwan
