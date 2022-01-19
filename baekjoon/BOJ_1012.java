@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author kimsihwan
  *
  */
-public class BOJ_10156 {
+public class BOJ_1012 {
 
 	static int[] dx = { 1, 0, -1, 0 };
 	static int[] dy = { 0, 1, 0, -1 };
