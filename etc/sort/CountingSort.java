@@ -1,4 +1,4 @@
-package sort;
+package etc.sort;
 
 /**
  * 이름 : 계수정렬(Counting Sort)

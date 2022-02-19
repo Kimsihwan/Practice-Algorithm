@@ -1,4 +1,4 @@
-package sort;
+package etc.sort;
 
 /**
  * 이름 : 삽입정렬(Insert Sort)

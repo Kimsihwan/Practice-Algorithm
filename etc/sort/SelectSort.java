@@ -1,4 +1,4 @@
-package sort;
+package etc.sort;
 
 /**
  * 이름 : 선택정렬(Select Sort)

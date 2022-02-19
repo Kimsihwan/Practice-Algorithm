@@ -1,4 +1,4 @@
-package sort;
+package etc.sort;
 
 /**
  * 이름 : 퀵정렬(Quick Sort)
