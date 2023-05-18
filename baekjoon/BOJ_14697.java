@@ -1,25 +1,30 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.*;
+import java.io.*;
 
 public class BOJ_14697 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] arr = br.readLine().split(" ");
-        int a = Integer.parseInt(arr[0]);
-        int b = Integer.parseInt(arr[1]);
-        int c = Integer.parseInt(arr[2]);
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int A = Integer.parseInt(st.nextToken());
+        int B = Integer.parseInt(st.nextToken());
+        int C = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(st.nextToken());
 
-        int d = Integer.parseInt(arr[3]);
-        int e = Integer.parseInt(arr[4]);
-        int f = Integer.parseInt(arr[5]);
-
-        for(int i = -999; i <= 999; i++) {
-            for(int j = -999; j <= 999; j++) {
-                if((a*i+b*j) == c && (d*i+e*j) == f) {
-                    System.out.println(i + " " + j);
-                    return;
+        for(int i = 0; i <= 50; i++) {
+            for(int j = 0; j <= 50; j++) {
+                for(int k = 0; k <= 50; k++) {
+                    int sum = (i*A) + (j*B) + (k*C);
+                    if(sum > N) {
+                        break;
+                    }
+                    if(sum == N) {
+                        System.out.print("1");
+                        return;
+                    }
                 }
             }
         }
+
+        System.out.print("0");
     }
 }
