@@ -1,27 +1,51 @@
-import java.util.Arrays;
-import java.util.Scanner;
+/******************************************************************************
 
-public class BOJ_9095 {
-    static Integer[] memo = new Integer[12];
+ Welcome to GDB Online.
+ GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+ C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+ Code, Compile, Run and Debug online from anywhere in world.
+
+ *******************************************************************************/
+
+import java.util.*;
+import java.io.*;
+
+public class BOJ_9095
+{
+    static int N;
+    static int M;
+    static int[] arr;
+    static Integer[] dp = new Integer[10001];
     public static void main(String[] args) throws Exception {
 
-        memo[1] = 1;
-        memo[2] = 2;
-        memo[3] = 4;
-
         Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
-        while(T-- > 0) {
-            int N = sc.nextInt();
-            dp(N);
-            System.out.println(memo[N]);
+
+        N = sc.nextInt();
+        M = sc.nextInt();
+        arr = new int[N];
+        dp = new Integer[M];
+        for(int i = 0; i < N; i++) {
+            arr[i] = sc.nextInt();
+            dp[arr[i]] = 1;
         }
+
+        // bottom up
+        // for(int i = 1; i <= M; i++) {
+
+        // }
+        dfs(M);
+
+        System.out.println(dp[M] == null ? -1 : dp[M]);
     }
 
-    static int dp(int k) {
-        if(memo[k] == null) {
-            memo[k] = dp(k-1)+dp(k-2)+dp(k-3);
+    static int dfs(int i) {
+        if(dp[i] == null) {
+            int min = Integer.MAX_VALUE;
+            for(int j = 0; j < arr.length; j++) {
+                min = Math.min(min, dfs(i-arr[j])+1);
+            }
+            dp[i] = min;
         }
-        return memo[k];
+        return dp[i];
     }
 }
