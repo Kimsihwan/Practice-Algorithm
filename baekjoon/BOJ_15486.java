@@ -1,7 +1,6 @@
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
 
-public class BOJ_14501 {
+public class BOJ_15486 {
     static int N;
     static int[] T;
     static int[] P;
